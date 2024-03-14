@@ -1,0 +1,39 @@
+<style>
+    input:not([type=submit]), textarea {
+        border: 1px solid #7A7A7A;
+        border-radius: 5px;
+        width: 100%;
+        line-height: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1em;
+    }
+    textarea {
+        resize: vertical;
+    }
+    form {
+        font-family: 'Quicksand', sans-serif;
+    }
+    label {
+        font-weight: 500;
+        color: #e29600;
+    }
+</style>
+
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    <input name="oid" type="hidden" value="00D1t000000xBws" />
+    <input name="00N3X00000GmwAR" type="hidden" value="Advisor" />
+    <input name="lead_source" type="hidden" value="Advisor Web Form" />
+    <label for="company">City name : </label>
+    <input id="company" maxlength="40" name="company" required="" type="text" />
+    <label for="last_name">Name : </label>
+    <input id="last_name" maxlength="80" name="last_name" required="" type="text" />
+    <label for="email">Email : </label>
+    <input id="email" maxlength="80" name="email" required="" type="email" />
+    <label for="lead_notes">Short Message (SMS) : </label>
+    <textarea id="lead_notes" maxlength="240" name="00N3X00000GoT3y" required=""></textarea>
+    <input name="00N3X00000Goi09" type="hidden" value="Government" />
+    <input name="retURL" type="hidden" value="https://www.smartcitiesadvisor.com/thank-you/" />
+    <input name="00N3X00000LsGqJ" type="hidden" value="Market Research" />
+    <input class="button_ default medium margin-t0 aligncenter bounceIn animated" style="margin-top: 1em; background-color: #f3a21b;" name="Submit" type="submit" value="Submit" />
+    <input id="00N3X00000LsGqT" name="00N3X00000LsGqT" type="hidden" value="" />
+</form>
