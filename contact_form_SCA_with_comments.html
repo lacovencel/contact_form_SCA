@@ -1,0 +1,80 @@
+<!-- STYLING -->
+<style>
+    /* 
+    * SELECTORS:
+    *   input:not([type=submit]) - selects all input elements that are not submit buttons
+    *   textarea - selects all textarea elements
+    * PROPERTIES:
+    *   border - sets the border of the element
+    *   border-radius - sets the radius of the border
+    *   width - sets the width of the element to 100%, so it takes up the full width of the container and is responsive
+    *   line-height - sets the line height of the element to 2rem, so it is easier to read and type in
+    *   margin-top - sets the top margin of the element
+    */
+    input:not([type=submit]), textarea {
+        border: 1px solid #7A7A7A;
+        border-radius: 5px;
+        width: 100%;
+        line-height: 2rem;
+        margin-top: .5em;
+        margin-bottom: 1em;
+    }
+    /*
+    * SELECTORS:
+    *   textarea - selects all textarea elements
+    * PROPERTIES:
+    *   resize - sets the resize property of the element to vertical, so the user can resize the textarea
+    */
+    textarea {
+        resize: vertical;
+    }
+    /*
+    * SELECTORS:
+    *   form - selects all form elements
+    * PROPERTIES:
+    *   font-family - sets the font family of the element to 'Quicksand', sans-serif which is the font used on the SCA website
+    */
+    form {
+        font-family: 'Quicksand', sans-serif;
+    }
+    /*
+    * SELECTORS:
+    *   label - selects all label elements
+    * PROPERTIES:
+    *   font-weight - sets the font weight of the element
+    *   color - sets the color of the element to #e29600, which is the orange color used on the SCA website
+    */
+    label {
+        font-weight: 500;
+        color: #e29600;
+    }
+</style>
+
+<!-- STRUCTURE -->
+<!-- Form that will be submitted to Salesforce using a POST request -->
+<form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    <!-- Hidden fields -->
+    <input name="oid" type="hidden" value="00D1t000000xBws" />
+    <input name="00N3X00000GmwAR" type="hidden" value="Advisor" />
+    <input name="lead_source" type="hidden" value="Advisor Web Form" />
+    <!-- City name field -->
+    <label for="company">City name : </label>
+    <input id="company" maxlength="40" name="company" required="" type="text" />
+    <!-- Name field -->
+    <label for="last_name">Name : </label>
+    <input id="last_name" maxlength="80" name="last_name" required="" type="text" />
+    <!-- Email field -->
+    <label for="email">Email : </label>
+    <input id="email" maxlength="80" name="email" required="" type="email" />
+    <!-- Message field -->
+    <label for="lead_notes">Short Message (SMS) : </label>
+    <textarea id="lead_notes" maxlength="240" name="00N3X00000GoT3y" required=""></textarea>
+    <!-- Hidden fields -->
+    <input name="00N3X00000Goi09" type="hidden" value="Government" />
+    <input name="retURL" type="hidden" value="https://www.smartcitiesadvisor.com/thank-you/" />
+    <input name="00N3X00000LsGqJ" type="hidden" value="Market Research" />
+    <!-- Submit button that contains inline styles -->
+    <input class="button_ default medium margin-t0 aligncenter bounceIn animated" style="margin-top: 1em; background-color: #f3a21b;" name="Submit" type="submit" value="Submit" />
+    <!-- Hidden field -->
+    <input id="00N3X00000LsGqT" name="00N3X00000LsGqT" type="hidden" value="" />
+</form>
