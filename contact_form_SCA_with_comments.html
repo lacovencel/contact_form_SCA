@@ -53,7 +53,7 @@
 <!-- STRUCTURE -->
 <!-- Form that will be submitted to Salesforce using a POST request -->
 <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
-    <!-- Hidden fields -->
+    <!-- Hidden fields - UNTOUCHED -->
     <input name="oid" type="hidden" value="00D1t000000xBws" />
     <input name="00N3X00000GmwAR" type="hidden" value="Advisor" />
     <input name="lead_source" type="hidden" value="Advisor Web Form" />
@@ -69,13 +69,19 @@
     <!-- Message field -->
     <label for="lead_notes">Short Message (SMS) : </label>
     <textarea id="lead_notes" maxlength="240" name="00N3X00000GoT3y" required=""></textarea>
-    <!-- Hidden fields -->
+    <!-- Hidden field - UNTOUCHED -->
     <input name="00N3X00000Goi09" type="hidden" value="Government" />
-    <!-- Redirection URL -->
+    <!-- Redirection URL that takes the user to the thank you page after the form is submitted -->
     <input name="retURL" type="hidden" value="https://www.smartcitiesadvisor.com/thank-you/" />
+    <!-- Hidden field - UNTOUCHED -->
     <input name="00N3X00000LsGqJ" type="hidden" value="Market Research" />
-    <!-- Submit button that contains inline styles -->
+    <!--
+        Submit button that contains inline styles
+        Background color can be changed by changing the background-color property
+        The text displayed on the button can be changed by changing the value attribute
+        Several other classes are added to the button that change its appearance
+    -->
     <input class="button_ default medium margin-t0 aligncenter bounceIn animated" style="margin-top: 1em; background-color: #f3a21b;" name="Submit" type="submit" value="Submit" />
-    <!-- Hidden field -->
+    <!-- Hidden field - UNTOUCHED -->
     <input id="00N3X00000LsGqT" name="00N3X00000LsGqT" type="hidden" value="" />
 </form>
